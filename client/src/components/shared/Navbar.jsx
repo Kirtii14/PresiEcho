@@ -9,6 +9,7 @@ import { Transition } from "@headlessui/react";
 import { AiOutlineBars } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
 import Logo from "../../assets/SocialEcho.png";
+import { motion } from "framer-motion";
 
 const Navbar = ({ userData, toggleLeftbar, showLeftbar }) => {
   const dispatch = useDispatch();
@@ -44,7 +45,13 @@ const Navbar = ({ userData, toggleLeftbar, showLeftbar }) => {
   return (
     <nav className="sticky top-0 z-20 mb-5 flex justify-center gap-10 border bg-white p-2 md:items-center md:justify-between md:px-36">
       <Link to="/" className="hidden md:inline-block">
-        <img className="w-36" src={Logo} alt="" />
+        <motion.img
+          className="w-36"
+          src={Logo}
+          alt="PresiEcho"
+          whileHover={{ scale: 1.05, rotate: -2 }}
+          transition={{ type: "spring", stiffness: 300, damping: 15 }}
+        />
       </Link>
 
       <button className="inline-block md:hidden" onClick={toggleLeftbar}>

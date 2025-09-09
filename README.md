@@ -1,6 +1,6 @@
-# SocialEcho
+# PresiEcho
 
-A social networking platform with automated content moderation and context-based authentication system.
+PresiEcho is a campus social platform for Presi University with automated content moderation and context-based authentication.
 
 [Watch Demo](https://youtu.be/Tmncayg7FeU)
 
@@ -99,26 +99,19 @@ Before running the application, make sure you have the following installed:
 - Node.js
 - MongoDB or MongoDB Atlas account
 
-### Installation
+### Installation (PresiEcho)
 
 1. Clone the repository
 
-```bash
-git clone https://github.com/nz-m/SocialEcho.git
-```
-2. Go to the project directory and install dependencies for both the client and server
+1. Download the PresiEcho folder (provided) or clone your fork
 
-```bash
-cd client
-npm install
-```
+2. Open two terminals and install dependencies:
+   - Terminal A
+     - `cd server && npm install`
+   - Terminal B
+     - `cd client && npm install`
 
-```bash
-cd server
-npm install
-```
-
-3. Create a `.env` file in both the `client` and `server` directories and add the environment variables as shown in the `.env.example` files.
+3. Create `.env` files in both `client` and `server` using `.env.example` as reference.
 4. Start the server
 
 ```bash
@@ -171,7 +164,7 @@ The admin dashboard can be accessed at the `/admin` route. Use the `admin_tool.s
 
 ### Moderator
 
-Moderators have specific email domain (`@mod.socialecho.com`). When registering with an email from this domain, the user is automatically assigned the moderator role. Moderators can be assigned to different communities from the admin dashboard.
+Moderators have specific email domain (`@mod.presiecho.com`). When registering with an email from this domain, the user is automatically assigned the moderator role. Moderators can be assigned to different communities from the admin dashboard.
 
 #### Demo
 https://youtu.be/Tmncayg7FeU

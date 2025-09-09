@@ -29,7 +29,7 @@ const SignUpNew = () => {
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
 
-    if (e.target.value.includes("mod.socialecho.com")) {
+    if (e.target.value.includes("mod.presiecho.com")) {
       setIsModerator(true);
     } else {
       setIsModerator(false);
