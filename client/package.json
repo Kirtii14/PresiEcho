@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "presiecho-client",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://127.0.0.1:4000",
@@ -29,7 +29,8 @@
     "react-spinners": "^0.13.8",
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "framer-motion": "^10.18.0"
   },
   "scripts": {
     "start": "react-scripts start",

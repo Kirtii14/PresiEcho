@@ -299,7 +299,12 @@ const addUser = async (req, res, next) => {
     : defaultAvatar;
 
   const emailDomain = req.body.email.split("@")[1];
-  const role = emailDomain === "mod.socialecho.com" ? "moderator" : "general";
+  if (emailDomain !== "presi.edu" && emailDomain !== "mod.presiecho.com") {
+    return res.status(400).json({
+      message: "Sign-ups are restricted. Please use your @presi.edu email.",
+    });
+  }
+  const role = emailDomain === "mod.presiecho.com" ? "moderator" : "general";
 
   newUser = new User({
     name: req.body.name,
